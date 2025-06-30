@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop All - CozyHomes Furniture</title>
+</head>
+<body>
+    <header>
+        <h1>CozyHomes Furniture</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="product_listing.html">Shop All</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#cart">Cart (0)</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Our Furniture Collection</h2>
+
+        <section id="filters-sort">
+            <form>
+                <label for="category">Category:</label>
+                <select id="category" name="category" onchange="this.form.submit()">
+                    <option value="">All</option>
+                    <option value="sofas">Sofas</option>
+                    <option value="beds">Beds</option>
+                    <option value="dining">Dining Sets</option>
+                    <option value="chairs">Chairs</option>
+                    <option value="tables">Tables</option>
+                </select>
+
+                <label for="price-range">Price Range:</label>
+                <select id="price-range" name="price-range" onchange="this.form.submit()">
+                    <option value="">All</option>
+                    <option value="0-10000">Below ₹10,000</option>
+                    <option value="10000-30000">₹10,000 - ₹30,000</option>
+                    <option value="30000-above">Above ₹30,000</option>
+                </select>
+
+                <label for="sort-by">Sort By:</label>
+                <select id="sort-by" name="sort-by" onchange="this.form.submit()">
+                    <option value="relevance">Relevance</option>
+                    <option value="price_asc">Price: Low to High</option>
+                    <option value="price_desc">Price: High to Low</option>
+                    <option value="newest">Newest Arrivals</option>
+                </select>
+            </form>
+        </section>
+
+        <section id="product-list">
+            <div class="product-card">
+                <a href="product_detail.html?id=sofa-modern-comfort">
+                    <img src="placeholder_sofa_product1.jpg" alt="Modern Comfort Sofa">
+                    <h3>Modern Comfort Sofa</h3>
+                    <p>₹34,999</p>
+                    <p>A spacious 3-seater sofa, perfect for contemporary living rooms.</p>
+                </a>
+                <button onclick="alert('Added to cart: Modern Comfort Sofa')">Add to Cart</button>
+            </div>
+
+            <div class="product-card">
+                <a href="product_detail.html?id=bed-luxe-dream">
+                    <img src="placeholder_bed_product1.jpg" alt="Luxe Dream Bed Frame">
+                    <h3>Luxe Dream Bed Frame (King Size)</h3>
+                    <p>₹45,500</p>
+                    <p>Premium wooden bed frame with built-in storage. Mattress sold separately.</p>
+                </a>
+                <button onclick="alert('Added to cart: Luxe Dream Bed Frame')">Add to Cart</button>
+            </div>
+
+            <div class="product-card">
+                <a href="product_detail.html?id=dining-harmony-set">
+                    <img src="placeholder_dining_product1.jpg" alt="Harmony 4-Seater Dining Set">
+                    <h3>Harmony 4-Seater Dining Set</h3>
+                    <p>₹22,000</p>
+                    <p>Compact and elegant dining set, ideal for small families.</p>
+                </a>
+                <button onclick="alert('Added to cart: Harmony 4-Seater Dining Set')">Add to Cart</button>
+            </div>
+
+            </section>
+
+        <section id="pagination">
+            <button>&laquo; Previous</button>
+            <span>Page 1 of 5</span>
+            <button>Next &raquo;</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 CozyHomes Furniture. All rights reserved.</p>
+    </footer>
+</body>
+</html>
