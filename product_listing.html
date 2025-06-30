@@ -10,101 +10,259 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- End Google Tag Manager -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shop All - CozyHomes Furniture</title>
+    <title>Chic Furnishings - All Products</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Font: Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8f8f8;
+            color: #333;
+        }
+        /* Custom scrollbar for aesthetics */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #888;
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+    </style>
 </head>
-<body>
+<body class="antialiased">
     <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K9H2KT7F"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
-    <header>
-        <h1>CozyHomes Furniture</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="product_listing.html">Shop All</a></li>
-                <li><a href="#about">About Us</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li><a href="#cart">Cart (0)</a></li>
-            </ul>
+
+    <!-- Header Section (re-used from homepage) -->
+    <header class="bg-white shadow-md py-4 px-6 md:px-10 flex flex-col md:flex-row justify-between items-center rounded-b-lg">
+        <!-- Logo and Site Name -->
+        <div class="flex items-center mb-4 md:mb-0">
+            <svg class="h-8 w-8 text-indigo-600 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001 1h3v-3m-3 3h3v-3m-3 0V9a1 1 0 011-1h3m-3 3h3v-3"></path>
+            </svg>
+            <h1 class="text-2xl font-bold text-gray-800">Chic Furnishings</h1>
+        </div>
+
+        <!-- Navigation Menu -->
+        <nav class="flex flex-wrap justify-center space-x-6 md:space-x-8 text-gray-600 font-medium">
+            <a href="index.html" class="hover:text-indigo-600 transition duration-300">Home</a>
+            <a href="product-listing.html" class="text-indigo-600 transition duration-300">Shop</a>
+            <a href="#" class="hover:text-indigo-600 transition duration-300">About Us</a>
+            <a href="#" class="hover:text-indigo-600 transition duration-300">Contact</a>
+            <a href="#" class="hover:text-indigo-600 transition duration-300">Blog</a>
         </nav>
+
+        <!-- User Actions (Login/Cart) -->
+        <div class="flex items-center space-x-4 mt-4 md:mt-0">
+            <button class="bg-indigo-500 hover:bg-indigo-600 text-white px-4 py-2 rounded-md shadow-md transition duration-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-opacity-50">Login</button>
+            <a href="checkout.html" class="relative text-gray-700 hover:text-indigo-600 transition duration-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-opacity-50 p-2 rounded-full">
+                <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13v.82A3 3 0 009.432 17H11m0 0h6m-6 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"></path>
+                </svg>
+                <span class="absolute -top-1 -right-1 bg-red-500 text-white text-xs px-2 py-1 rounded-full">3</span>
+            </a>
+        </div>
     </header>
 
-    <main>
-        <h2>Our Furniture Collection</h2>
+    <!-- Product Listing Section -->
+    <section class="container mx-auto px-6 md:px-10 py-16">
+        <h2 class="text-4xl font-bold text-gray-800 text-center mb-12">All Products</h2>
 
-        <section id="filters-sort">
-            <form>
-                <label for="category">Category:</label>
-                <select id="category" name="category" onchange="this.form.submit()">
-                    <option value="">All</option>
-                    <option value="sofas">Sofas</option>
-                    <option value="beds">Beds</option>
-                    <option value="dining">Dining Sets</option>
-                    <option value="chairs">Chairs</option>
-                    <option value="tables">Tables</option>
+        <!-- Filters and Sorting (Optional) -->
+        <div class="flex flex-col md:flex-row justify-between items-center mb-8 gap-4">
+            <div class="w-full md:w-1/3">
+                <label for="category-filter" class="block text-sm font-medium text-gray-700 mb-1">Filter by Category</label>
+                <select id="category-filter" class="mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md shadow-sm">
+                    <option>All Categories</option>
+                    <option>Living Room</option>
+                    <option>Bedroom</option>
+                    <option>Dining Room</option>
+                    <option>Home Office</option>
                 </select>
-
-                <label for="price-range">Price Range:</label>
-                <select id="price-range" name="price-range" onchange="this.form.submit()">
-                    <option value="">All</option>
-                    <option value="0-10000">Below ₹10,000</option>
-                    <option value="10000-30000">₹10,000 - ₹30,000</option>
-                    <option value="30000-above">Above ₹30,000</option>
+            </div>
+            <div class="w-full md:w-1/3">
+                <label for="sort-by" class="block text-sm font-medium text-gray-700 mb-1">Sort by</label>
+                <select id="sort-by" class="mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md shadow-sm">
+                    <option>Relevance</option>
+                    <option>Price: Low to High</option>
+                    <option>Price: High to Low</option>
+                    <option>Newest Arrivals</option>
                 </select>
-
-                <label for="sort-by">Sort By:</label>
-                <select id="sort-by" name="sort-by" onchange="this.form.submit()">
-                    <option value="relevance">Relevance</option>
-                    <option value="price_asc">Price: Low to High</option>
-                    <option value="price_desc">Price: High to Low</option>
-                    <option value="newest">Newest Arrivals</option>
-                </select>
-            </form>
-        </section>
-
-        <section id="product-list">
-            <div class="product-card">
-                <a href="product_detail.html?id=sofa-modern-comfort">
-                    <img src="placeholder_sofa_product1.jpg" alt="Modern Comfort Sofa">
-                    <h3>Modern Comfort Sofa</h3>
-                    <p>₹34,999</p>
-                    <p>A spacious 3-seater sofa, perfect for contemporary living rooms.</p>
-                </a>
-                <button onclick="alert('Added to cart: Modern Comfort Sofa')">Add to Cart</button>
             </div>
-
-            <div class="product-card">
-                <a href="product_detail.html?id=bed-luxe-dream">
-                    <img src="placeholder_bed_product1.jpg" alt="Luxe Dream Bed Frame">
-                    <h3>Luxe Dream Bed Frame (King Size)</h3>
-                    <p>₹45,500</p>
-                    <p>Premium wooden bed frame with built-in storage. Mattress sold separately.</p>
-                </a>
-                <button onclick="alert('Added to cart: Luxe Dream Bed Frame')">Add to Cart</button>
+            <div class="w-full md:w-1/3">
+                <label for="search" class="block text-sm font-medium text-gray-700 mb-1">Search Products</label>
+                <input type="text" id="search" placeholder="Search..." class="mt-1 block w-full pl-3 pr-3 py-2 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md shadow-sm">
             </div>
+        </div>
 
-            <div class="product-card">
-                <a href="product_detail.html?id=dining-harmony-set">
-                    <img src="placeholder_dining_product1.jpg" alt="Harmony 4-Seater Dining Set">
-                    <h3>Harmony 4-Seater Dining Set</h3>
-                    <p>₹22,000</p>
-                    <p>Compact and elegant dining set, ideal for small families.</p>
-                </a>
-                <button onclick="alert('Added to cart: Harmony 4-Seater Dining Set')">Add to Cart</button>
+        <!-- Product Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+            <!-- Product Card 1 -->
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden group">
+                <div class="relative">
+                    <img src="https://placehold.co/600x400/9CA3AF/FFFFFF?text=Modern+Sofa" alt="Modern Sofa" class="w-full h-64 object-cover object-center transform group-hover:scale-105 transition duration-300 ease-in-out">
+                    <span class="absolute top-3 left-3 bg-indigo-600 text-white text-xs font-semibold px-3 py-1 rounded-full">New Arrival</span>
+                </div>
+                <div class="p-6">
+                    <h4 class="text-xl font-semibold text-gray-800 mb-2">Comfort Cloud Sofa</h4>
+                    <p class="text-gray-600 text-sm mb-4">Luxurious and cozy, perfect for any living space.</p>
+                    <div class="flex items-center justify-between">
+                        <span class="text-2xl font-bold text-indigo-700">$999.00</span>
+                        <a href="product-details.html?id=1" class="text-indigo-600 hover:text-indigo-800 text-sm font-medium transition duration-300">View Details</a>
+                    </div>
+                    <button class="mt-4 w-full bg-indigo-500 hover:bg-indigo-600 text-white px-5 py-2 rounded-md shadow-md transition duration-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-opacity-50">Add to Cart</button>
+                </div>
             </div>
+            <!-- Product Card 2 -->
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden group">
+                <div class="relative">
+                    <img src="https://placehold.co/600x400/9CA3AF/FFFFFF?text=Elegant+Chair" alt="Elegant Dining Chair" class="w-full h-64 object-cover object-center transform group-hover:scale-105 transition duration-300 ease-in-out">
+                    <span class="absolute top-3 left-3 bg-green-500 text-white text-xs font-semibold px-3 py-1 rounded-full">Best Seller</span>
+                </div>
+                <div class="p-6">
+                    <h4 class="text-xl font-semibold text-gray-800 mb-2">Nordic Dining Chair</h4>
+                    <p class="text-gray-600 text-sm mb-4">Stylish and sturdy, ideal for modern dining rooms.</p>
+                    <div class="flex items-center justify-between">
+                        <span class="text-2xl font-bold text-indigo-700">$149.00</span>
+                        <a href="product-details.html?id=2" class="text-indigo-600 hover:text-indigo-800 text-sm font-medium transition duration-300">View Details</a>
+                    </div>
+                    <button class="mt-4 w-full bg-indigo-500 hover:bg-indigo-600 text-white px-5 py-2 rounded-md shadow-md transition duration-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-opacity-50">Add to Cart</button>
+                </div>
+            </div>
+            <!-- Product Card 3 -->
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden group">
+                <div class="relative">
+                    <img src="https://placehold.co/600x400/9CA3AF/FFFFFF?text=Minimalist+Desk" alt="Minimalist Office Desk" class="w-full h-64 object-cover object-center transform group-hover:scale-105 transition duration-300 ease-in-out">
+                    <span class="absolute top-3 left-3 bg-red-500 text-white text-xs font-semibold px-3 py-1 rounded-full">Limited Stock</span>
+                </div>
+                <div class="p-6">
+                    <h4 class="text-xl font-semibold text-gray-800 mb-2">Executive Study Desk</h4>
+                    <p class="text-gray-600 text-sm mb-4">Spacious and functional, perfect for home office.</p>
+                    <div class="flex items-center justify-between">
+                        <span class="text-2xl font-bold text-indigo-700">$499.00</span>
+                        <a href="product-details.html?id=3" class="text-indigo-600 hover:text-indigo-800 text-sm font-medium transition duration-300">View Details</a>
+                    </div>
+                    <button class="mt-4 w-full bg-indigo-500 hover:bg-indigo-600 text-white px-5 py-2 rounded-md shadow-md transition duration-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-opacity-50">Add to Cart</button>
+                </div>
+            </div>
+            <!-- Product Card 4 -->
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden group">
+                <div class="relative">
+                    <img src="https://placehold.co/600x400/9CA3AF/FFFFFF?text=King+Bed" alt="King Size Bed" class="w-full h-64 object-cover object-center transform group-hover:scale-105 transition duration-300 ease-in-out">
+                    <span class="absolute top-3 left-3 bg-indigo-600 text-white text-xs font-semibold px-3 py-1 rounded-full">New Arrival</span>
+                </div>
+                <div class="p-6">
+                    <h4 class="text-xl font-semibold text-gray-800 mb-2">Grand Regal King Bed</h4>
+                    <p class="text-gray-600 text-sm mb-4">Experience ultimate comfort and style every night.</p>
+                    <div class="flex items-center justify-between">
+                        <span class="text-2xl font-bold text-indigo-700">$1299.00</span>
+                        <a href="product-details.html?id=4" class="text-indigo-600 hover:text-indigo-800 text-sm font-medium transition duration-300">View Details</a>
+                    </div>
+                    <button class="mt-4 w-full bg-indigo-500 hover:bg-indigo-600 text-white px-5 py-2 rounded-md shadow-md transition duration-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-opacity-50">Add to Cart</button>
+                </div>
+            </div>
+            <!-- Add more product cards as needed -->
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden group">
+                <div class="relative">
+                    <img src="https://placehold.co/600x400/9CA3AF/FFFFFF?text=Bookshelf" alt="Modern Bookshelf" class="w-full h-64 object-cover object-center transform group-hover:scale-105 transition duration-300 ease-in-out">
+                    <span class="absolute top-3 left-3 bg-blue-500 text-white text-xs font-semibold px-3 py-1 rounded-full">Popular</span>
+                </div>
+                <div class="p-6">
+                    <h4 class="text-xl font-semibold text-gray-800 mb-2">Minimalist Bookshelf</h4>
+                    <p class="text-gray-600 text-sm mb-4">Sleek design with ample storage for your collection.</p>
+                    <div class="flex items-center justify-between">
+                        <span class="text-2xl font-bold text-indigo-700">$349.00</span>
+                        <a href="product-details.html?id=5" class="text-indigo-600 hover:text-indigo-800 text-sm font-medium transition duration-300">View Details</a>
+                    </div>
+                    <button class="mt-4 w-full bg-indigo-500 hover:bg-indigo-600 text-white px-5 py-2 rounded-md shadow-md transition duration-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-opacity-50">Add to Cart</button>
+                </div>
+            </div>
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden group">
+                <div class="relative">
+                    <img src="https://placehold.co/600x400/9CA3AF/FFFFFF?text=Accent+Table" alt="Accent Side Table" class="w-full h-64 object-cover object-center transform group-hover:scale-105 transition duration-300 ease-in-out">
+                    <span class="absolute top-3 left-3 bg-purple-500 text-white text-xs font-semibold px-3 py-1 rounded-full">New Design</span>
+                </div>
+                <div class="p-6">
+                    <h4 class="text-xl font-semibold text-gray-800 mb-2">Geometric Accent Table</h4>
+                    <p class="text-gray-600 text-sm mb-4">Adds a touch of modern art to any corner.</p>
+                    <div class="flex items-center justify-between">
+                        <span class="text-2xl font-bold text-indigo-700">$89.00</span>
+                        <a href="product-details.html?id=6" class="text-indigo-600 hover:text-indigo-800 text-sm font-medium transition duration-300">View Details</a>
+                    </div>
+                    <button class="mt-4 w-full bg-indigo-500 hover:bg-indigo-600 text-white px-5 py-2 rounded-md shadow-md transition duration-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-opacity-50">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+        <!-- Pagination (Basic Example) -->
+        <div class="flex justify-center mt-12 space-x-2">
+            <button class="px-4 py-2 bg-indigo-500 text-white rounded-md hover:bg-indigo-600 transition duration-300">1</button>
+            <button class="px-4 py-2 bg-gray-200 text-gray-700 rounded-md hover:bg-gray-300 transition duration-300">2</button>
+            <button class="px-4 py-2 bg-gray-200 text-gray-700 rounded-md hover:bg-gray-300 transition duration-300">3</button>
+            <button class="px-4 py-2 bg-gray-200 text-gray-700 rounded-md hover:bg-gray-300 transition duration-300">Next &rarr;</button>
+        </div>
+    </section>
 
-            </section>
-
-        <section id="pagination">
-            <button>&laquo; Previous</button>
-            <span>Page 1 of 5</span>
-            <button>Next &raquo;</button>
-        </section>
-    </main>
-
-    <footer>
-        <p>&copy; 2025 CozyHomes Furniture. All rights reserved.</p>
+    <!-- Footer Section (re-used from homepage) -->
+    <footer class="bg-gray-900 text-gray-300 py-10 px-6 md:px-10 rounded-t-lg">
+        <div class="container mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
+            <!-- About Us -->
+            <div>
+                <h5 class="text-white text-lg font-bold mb-4">Chic Furnishings</h5>
+                <p class="text-sm">
+                    Bringing elegance and comfort to your home with high-quality, modern furniture designs.
+                </p>
+            </div>
+            <!-- Quick Links -->
+            <div>
+                <h5 class="text-white text-lg font-bold mb-4">Quick Links</h5>
+                <ul class="space-y-2">
+                    <li><a href="#" class="hover:text-white transition duration-300">Shop All</a></li>
+                    <li><a href="#" class="hover:text-white transition duration-300">FAQs</a></li>
+                    <li><a href="#" class="hover:text-white transition duration-300">Shipping & Returns</a></li>
+                    <li><a href="#" class="hover:text-white transition duration-300">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <!-- Contact Info -->
+            <div>
+                <h5 class="text-white text-lg font-bold mb-4">Contact Us</h5>
+                <p class="text-sm">
+                    123 Home Decor Lane, Furniture City<br>
+                    Email: info@chicfurnishings.com<br>
+                    Phone: +1 (234) 567-8900
+                </p>
+            </div>
+            <!-- Social Media -->
+            <div>
+                <h5 class="text-white text-lg font-bold mb-4">Follow Us</h5>
+                <div class="flex space-x-4">
+                    <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                        <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33V22H12c5.523 0 10-4.477 10-10z" clip-rule="evenodd" /></svg>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                        <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12.315 2.417a.75.75 0 01.07.867 8.685 8.685 0 00-1.348 3.12c0 2.457 1.254 4.887 3.267 6.326.602.428 1.25.795 1.934 1.102 1.63.746 3.234 1.344 4.205 2.052.88.625 1.494 1.503 1.494 2.593 0 1.252-.843 2.15-1.748 2.378a3.177 3.177 0 01-2.032-.577c-.878-.444-1.972-.942-3.32-1.393-2.915-1-5.719-2.61-7.147-4.908C3.172 13.914 2 11.758 2 9.5a7.5 7.5 0 0110.315-7.083z" clip-rule="evenodd" /></svg>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                        <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M.5 4.333V.666h23v3.667H.5zM23.5 6H.5v13.333h23V6z" /></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="border-t border-gray-700 mt-8 pt-6 text-center text-sm">
+            &copy; 2025 Chic Furnishings. All rights reserved.
+        </div>
     </footer>
+
 </body>
 </html>
+
