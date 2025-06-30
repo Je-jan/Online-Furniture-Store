@@ -10,129 +10,236 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- End Google Tag Manager -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Checkout - CozyHomes Furniture</title>
+    <title>Checkout - Chic Furnishings</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Font: Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8f8f8;
+            color: #333;
+        }
+        /* Custom scrollbar for aesthetics */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #888;
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+    </style>
 </head>
-<body>
+<body class="antialiased">
     <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K9H2KT7F"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
-    <header>
-        <h1>CozyHomes Furniture</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="product_listing.html">Shop All</a></li>
-                <li><a href="#about">About Us</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li><a href="#cart">Cart (X)</a></li> </ul>
+
+    <!-- Header Section (re-used from homepage) -->
+    <header class="bg-white shadow-md py-4 px-6 md:px-10 flex flex-col md:flex-row justify-between items-center rounded-b-lg">
+        <!-- Logo and Site Name -->
+        <div class="flex items-center mb-4 md:mb-0">
+            <svg class="h-8 w-8 text-indigo-600 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001 1h3v-3m-3 3h3v-3m-3 0V9a1 1 0 011-1h3m-3 3h3v-3"></path>
+            </svg>
+            <h1 class="text-2xl font-bold text-gray-800">Chic Furnishings</h1>
+        </div>
+
+        <!-- Navigation Menu -->
+        <nav class="flex flex-wrap justify-center space-x-6 md:space-x-8 text-gray-600 font-medium">
+            <a href="index.html" class="hover:text-indigo-600 transition duration-300">Home</a>
+            <a href="product-listing.html" class="hover:text-indigo-600 transition duration-300">Shop</a>
+            <a href="#" class="hover:text-indigo-600 transition duration-300">About Us</a>
+            <a href="#" class="hover:text-indigo-600 transition duration-300">Contact</a>
+            <a href="#" class="hover:text-indigo-600 transition duration-300">Blog</a>
         </nav>
+
+        <!-- User Actions (Login/Cart) -->
+        <div class="flex items-center space-x-4 mt-4 md:mt-0">
+            <button class="bg-indigo-500 hover:bg-indigo-600 text-white px-4 py-2 rounded-md shadow-md transition duration-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-opacity-50">Login</button>
+            <a href="#" class="relative text-gray-700 hover:text-indigo-600 transition duration-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-opacity-50 p-2 rounded-full">
+                <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13v.82A3 3 0 009.432 17H11m0 0h6m-6 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"></path>
+                </svg>
+                <span class="absolute -top-1 -right-1 bg-red-500 text-white text-xs px-2 py-1 rounded-full">3</span>
+            </a>
+        </div>
     </header>
 
-    <main>
-        <h2>Checkout</h2>
+    <!-- Checkout Section -->
+    <section class="container mx-auto px-6 md:px-10 py-16">
+        <h2 class="text-4xl font-bold text-gray-800 text-center mb-12">Checkout</h2>
 
-        <section id="order-summary">
-            <h3>Your Order</h3>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Product</th>
-                        <th>Quantity</th>
-                        <th>Price</th>
-                        <th>Subtotal</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Modern Comfort Sofa (Grey)</td>
-                        <td>1</td>
-                        <td>₹34,999</td>
-                        <td>₹34,999</td>
-                    </tr>
-                    <tr>
-                        <td>Elegant Coffee Table</td>
-                        <td>1</td>
-                        <td>₹8,500</td>
-                        <td>₹8,500</td>
-                    </tr>
-                </tbody>
-                <tfoot>
-                    <tr>
-                        <td colspan="3">Shipping (Standard)</td>
-                        <td>₹1,500</td>
-                    </tr>
-                    <tr>
-                        <td colspan="3"><strong>Total</strong></td>
-                        <td><strong>₹44,999</strong></td>
-                    </tr>
-                </tfoot>
-            </table>
-            <button onclick="alert('Redirecting to Product Listing to add more items.')">Continue Shopping</button>
-        </section>
+        <div class="flex flex-col lg:flex-row gap-8">
+            <!-- Shipping Information Form -->
+            <div class="bg-white rounded-xl shadow-lg p-6 md:p-8 lg:w-2/3">
+                <h3 class="text-2xl font-bold text-gray-800 mb-6">Shipping Information</h3>
+                <form class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="col-span-1">
+                        <label for="first-name" class="block text-sm font-medium text-gray-700 mb-1">First Name</label>
+                        <input type="text" id="first-name" class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                    </div>
+                    <div class="col-span-1">
+                        <label for="last-name" class="block text-sm font-medium text-gray-700 mb-1">Last Name</label>
+                        <input type="text" id="last-name" class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                    </div>
+                    <div class="col-span-2">
+                        <label for="address" class="block text-sm font-medium text-gray-700 mb-1">Address</label>
+                        <input type="text" id="address" class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                    </div>
+                    <div class="col-span-2">
+                        <label for="address2" class="block text-sm font-medium text-gray-700 mb-1">Address 2 (Optional)</label>
+                        <input type="text" id="address2" class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                    </div>
+                    <div class="col-span-1">
+                        <label for="city" class="block text-sm font-medium text-gray-700 mb-1">City</label>
+                        <input type="text" id="city" class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                    </div>
+                    <div class="col-span-1">
+                        <label for="state" class="block text-sm font-medium text-gray-700 mb-1">State / Province</label>
+                        <input type="text" id="state" class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                    </div>
+                    <div class="col-span-1">
+                        <label for="zip" class="block text-sm font-medium text-gray-700 mb-1">Zip / Postal Code</label>
+                        <input type="text" id="zip" class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                    </div>
+                    <div class="col-span-1">
+                        <label for="phone" class="block text-sm font-medium text-gray-700 mb-1">Phone Number</label>
+                        <input type="tel" id="phone" class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                    </div>
+                </form>
 
-        <section id="shipping-information">
-            <h3>Shipping Information</h3>
-            <form>
-                <label for="full-name">Full Name:</label>
-                <input type="text" id="full-name" name="full-name" required><br><br>
+                <h3 class="text-2xl font-bold text-gray-800 mt-10 mb-6">Payment Information</h3>
+                <form class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="col-span-2">
+                        <label for="card-name" class="block text-sm font-medium text-gray-700 mb-1">Name on Card</label>
+                        <input type="text" id="card-name" class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                    </div>
+                    <div class="col-span-2">
+                        <label for="card-number" class="block text-sm font-medium text-gray-700 mb-1">Card Number</label>
+                        <input type="text" id="card-number" class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500" placeholder="XXXX-XXXX-XXXX-XXXX">
+                    </div>
+                    <div class="col-span-1">
+                        <label for="expiry-date" class="block text-sm font-medium text-gray-700 mb-1">Expiry Date (MM/YY)</label>
+                        <input type="text" id="expiry-date" class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500" placeholder="MM/YY">
+                    </div>
+                    <div class="col-span-1">
+                        <label for="cvv" class="block text-sm font-medium text-gray-700 mb-1">CVV</label>
+                        <input type="text" id="cvv" class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500" placeholder="XXX">
+                    </div>
+                </form>
+            </div>
 
-                <label for="address-line1">Address Line 1:</label>
-                <input type="text" id="address-line1" name="address-line1" required><br><br>
+            <!-- Order Summary -->
+            <div class="bg-white rounded-xl shadow-lg p-6 md:p-8 lg:w-1/3">
+                <h3 class="text-2xl font-bold text-gray-800 mb-6">Order Summary</h3>
+                <div class="space-y-4">
+                    <!-- Item 1 -->
+                    <div class="flex justify-between items-center pb-2 border-b border-gray-200">
+                        <div class="flex items-center space-x-4">
+                            <img src="https://placehold.co/80x80/9CA3AF/FFFFFF?text=Sofa" alt="Comfort Cloud Sofa" class="w-20 h-20 object-cover rounded-md">
+                            <div>
+                                <p class="font-semibold text-gray-800">Comfort Cloud Sofa</p>
+                                <p class="text-sm text-gray-500">Qty: 1</p>
+                            </div>
+                        </div>
+                        <span class="font-semibold text-gray-800">$999.00</span>
+                    </div>
+                    <!-- Item 2 -->
+                    <div class="flex justify-between items-center pb-2 border-b border-gray-200">
+                        <div class="flex items-center space-x-4">
+                            <img src="https://placehold.co/80x80/9CA3AF/FFFFFF?text=Chair" alt="Nordic Dining Chair" class="w-20 h-20 object-cover rounded-md">
+                            <div>
+                                <p class="font-semibold text-gray-800">Nordic Dining Chair</p>
+                                <p class="text-sm text-gray-500">Qty: 2</p>
+                            </div>
+                        </div>
+                        <span class="font-semibold text-gray-800">$298.00</span>
+                    </div>
 
-                <label for="address-line2">Address Line 2 (Optional):</label>
-                <input type="text" id="address-line2" name="address-line2"><br><br>
-
-                <label for="city">City:</label>
-                <input type="text" id="city" name="city" required><br><br>
-
-                <label for="state">State/Province:</label>
-                <input type="text" id="state" name="state" required><br><br>
-
-                <label for="zip-code">Zip/Postal Code:</label>
-                <input type="text" id="zip-code" name="zip-code" required><br><br>
-
-                <label for="phone">Phone Number:</label>
-                <input type="tel" id="phone" name="phone" required><br><br>
-            </form>
-        </section>
-
-        <section id="payment-information">
-            <h3>Payment Information</h3>
-            <form>
-                <label for="payment-method">Payment Method:</label>
-                <select id="payment-method" name="payment-method" required>
-                    <option value="">Select Method</option>
-                    <option value="credit-card">Credit Card</option>
-                    <option value="debit-card">Debit Card</option>
-                    <option value="net-banking">Net Banking</option>
-                    <option value="upi">UPI</option>
-                </select><br><br>
-
-                <div id="credit-card-details" style="display: block;">
-                    <label for="card-number">Card Number:</label>
-                    <input type="text" id="card-number" name="card-number" placeholder="XXXX XXXX XXXX XXXX" required><br><br>
-
-                    <label for="expiry-date">Expiry Date (MM/YY):</label>
-                    <input type="text" id="expiry-date" name="expiry-date" placeholder="MM/YY" required><br><br>
-
-                    <label for="cvv">CVV:</label>
-                    <input type="text" id="cvv" name="cvv" placeholder="XXX" required><br><br>
+                    <div class="flex justify-between text-gray-700">
+                        <span>Subtotal:</span>
+                        <span>$1297.00</span>
+                    </div>
+                    <div class="flex justify-between text-gray-700">
+                        <span>Shipping:</span>
+                        <span>$50.00</span>
+                    </div>
+                    <div class="flex justify-between text-gray-700 border-b border-gray-200 pb-4">
+                        <span>Tax (8%):</span>
+                        <span>$103.76</span>
+                    </div>
+                    <div class="flex justify-between text-2xl font-bold text-gray-800 pt-4">
+                        <span>Total:</span>
+                        <span>$1450.76</span>
+                    </div>
                 </div>
 
-                <input type="checkbox" id="save-info" name="save-info">
-                <label for="save-info">Save my information for faster checkout</label><br><br>
-            </form>
-        </section>
+                <button class="mt-8 w-full bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-4 px-6 rounded-md shadow-lg transform hover:scale-105 transition duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-opacity-50">
+                    Place Order
+                </button>
+            </div>
+        </div>
+    </section>
 
-        <section id="order-confirmation">
-            <button onclick="alert('Thank you for your order! Your order #CH12345 has been placed and a confirmation email sent.')">Place Order</button>
-            <p>By placing your order, you agree to our <a href="#terms">Terms and Conditions</a> and <a href="#privacy">Privacy Policy</a>.</p>
-        </section>
-    </main>
-
-    <footer>
-        <p>&copy; 2025 CozyHomes Furniture. All rights reserved.</p>
+    <!-- Footer Section (re-used from homepage) -->
+    <footer class="bg-gray-900 text-gray-300 py-10 px-6 md:px-10 rounded-t-lg">
+        <div class="container mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
+            <!-- About Us -->
+            <div>
+                <h5 class="text-white text-lg font-bold mb-4">Chic Furnishings</h5>
+                <p class="text-sm">
+                    Bringing elegance and comfort to your home with high-quality, modern furniture designs.
+                </p>
+            </div>
+            <!-- Quick Links -->
+            <div>
+                <h5 class="text-white text-lg font-bold mb-4">Quick Links</h5>
+                <ul class="space-y-2">
+                    <li><a href="#" class="hover:text-white transition duration-300">Shop All</a></li>
+                    <li><a href="#" class="hover:text-white transition duration-300">FAQs</a></li>
+                    <li><a href="#" class="hover:text-white transition duration-300">Shipping & Returns</a></li>
+                    <li><a href="#" class="hover:text-white transition duration-300">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <!-- Contact Info -->
+            <div>
+                <h5 class="text-white text-lg font-bold mb-4">Contact Us</h5>
+                <p class="text-sm">
+                    123 Home Decor Lane, Furniture City<br>
+                    Email: info@chicfurnishings.com<br>
+                    Phone: +1 (234) 567-8900
+                </p>
+            </div>
+            <!-- Social Media -->
+            <div>
+                <h5 class="text-white text-lg font-bold mb-4">Follow Us</h5>
+                <div class="flex space-x-4">
+                    <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                        <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33V22H12c5.523 0 10-4.477 10-10z" clip-rule="evenodd" /></svg>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                        <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12.315 2.417a.75.75 0 01.07.867 8.685 8.685 0 00-1.348 3.12c0 2.457 1.254 4.887 3.267 6.326.602.428 1.25.795 1.934 1.102 1.63.746 3.234 1.344 4.205 2.052.88.625 1.494 1.503 1.494 2.593 0 1.252-.843 2.15-1.748 2.378a3.177 3.177 0 01-2.032-.577c-.878-.444-1.972-.942-3.32-1.393-2.915-1-5.719-2.61-7.147-4.908C3.172 13.914 2 11.758 2 9.5a7.5 7.5 0 0110.315-7.083z" clip-rule="evenodd" /></svg>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                        <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M.5 4.333V.666h23v3.667H.5zM23.5 6H.5v13.333h23V6z" /></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="border-t border-gray-700 mt-8 pt-6 text-center text-sm">
+            &copy; 2025 Chic Furnishings. All rights reserved.
+        </div>
     </footer>
+
 </body>
 </html>
