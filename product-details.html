@@ -1,183 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modern Comfort Sofa - Your Furniture Store</title>
-    <link rel="stylesheet" href="css/style.css"> </head>
+    <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-K9H2KT7F');</script>
+<!-- End Google Tag Manager -->
+  <meta charset="UTF-8">
+  <title>FurniStyle - Product Details</title>
+  <style>
+    body { font-family: Arial; padding: 40px; background: #fdfdfd; }
+    .container { max-width: 600px; margin: auto; text-align: center; }
+    img { width: 100%; max-height: 300px; object-fit: cover; border-radius: 8px; }
+    button { padding: 10px 20px; background: green; color: white; border: none; margin-top: 20px; cursor: pointer; }
+    button:hover { background: darkgreen; }
+  </style>
+</head>
 <body>
-    <header>
-        <div class="container">
-            <div class="logo">
-                <a href="index.html">YourFurniture</a>
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="products.html">Shop</a></li>
-                    <li><a href="#">About Us</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
-            </nav>
-            <div class="header-icons">
-                <input type="text" placeholder="Search...">
-                <a href="#">Account</a>
-                <a href="#">Cart (0)</a>
-            </div>
-        </div>
-    </header>
+    <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K9H2KT7F"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+  <div class="container">
+    <h1 id="product-title">Product Name</h1>
+    <img id="product-image" src="https://via.placeholder.com/600x300" alt="Product">
+    <p id="product-description">High-quality furniture perfect for your home.</p>
+    <button onclick="location.href='checkout.html'">Buy Now</button>
+  </div>
 
-    <main>
-        <section class="product-details">
-            <div class="container">
-                <nav class="breadcrumbs">
-                    <a href="index.html">Home</a> &gt; <a href="products.html">Shop</a> &gt; <span>Modern Comfort Sofa</span>
-                </nav>
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const item = params.get('item') || 'sofa';
 
-                <div class="product-main-info">
-                    <div class="product-image-gallery">
-                        <img src="images/sofa_product_large.jpg" alt="Modern Comfort Sofa" class="main-image">
-                        <div class="thumbnails">
-                            <img src="images/sofa_thumb1.jpg" alt="Sofa View 1">
-                            <img src="images/sofa_thumb2.jpg" alt="Sofa View 2">
-                            <img src="images/sofa_thumb3.jpg" alt="Sofa View 3">
-                        </div>
-                    </div>
+    const productData = {
+      sofa: {
+        name: 'Luxury Sofa',
+        desc: 'Comfortable 3-seater with premium fabric. Perfect for your living room.',
+        img: 'https://via.placeholder.com/600x300?text=Luxury+Sofa'
+      },
+      chair: {
+        name: 'Ergonomic Chair',
+        desc: 'Supportive office chair with mesh back for long hours of work.',
+        img: 'https://via.placeholder.com/600x300?text=Ergonomic+Chair'
+      },
+      table: {
+        name: 'Dining Table',
+        desc: 'Modern wooden table that comfortably seats six.',
+        img: 'https://via.placeholder.com/600x300?text=Dining+Table'
+      }
+    };
 
-                    <div class="product-info-text">
-                        <h1>Modern Comfort Sofa</h1>
-                        <p class="brand">By LuxFurnish</p>
-                        <p class="price">₹ 45,000</p>
-                        <div class="availability">Status: <span class="in-stock">In Stock</span></div>
-
-                        <div class="product-options">
-                            <label for="color">Color:</label>
-                            <select id="color">
-                                <option value="grey">Grey</option>
-                                <option value="blue">Blue</option>
-                                <option value="beige">Beige</option>
-                            </select>
-
-                            <label for="material">Material:</label>
-                            <select id="material">
-                                <option value="fabric">Fabric</option>
-                                <option value="leather">Faux Leather</option>
-                            </select>
-                        </div>
-
-                        <div class="quantity-selector">
-                            <label for="quantity">Quantity:</label>
-                            <input type="number" id="quantity" value="1" min="1">
-                        </div>
-
-                        <button class="btn add-to-cart-btn">Add to Cart</button>
-                        <button class="btn add-to-wishlist-btn">Add to Wishlist</button>
-
-                        <p class="delivery-estimate">Estimated Delivery: 3-5 business days</p>
-                    </div>
-                </div>
-
-                <div class="product-tabs">
-                    <div class="tab-header">
-                        <button class="tab-button active">Description</button>
-                        <button class="tab-button">Specifications</button>
-                        <button class="tab-button">Reviews (12)</button>
-                        <button class="tab-button">Delivery & Returns</button>
-                    </div>
-                    <div class="tab-content active">
-                        <h3>Product Description</h3>
-                        <p>Experience ultimate comfort with our Modern Comfort Sofa. Designed with plush cushions and a sturdy wooden frame, this sofa is perfect for contemporary living spaces. Its sleek lines and neutral color options seamlessly blend with any decor. Made with high-quality, durable fabric that is easy to maintain.</p>
-                        <ul>
-                            <li>Premium fabric upholstery</li>
-                            <li>Solid wood frame construction</li>
-                            <li>High-density foam cushions</li>
-                            <li>Easy assembly</li>
-                        </ul>
-                    </div>
-                    <div class="tab-content">
-                        <h3>Specifications</h3>
-                        <p>Dimensions: 200cm (W) x 90cm (D) x 85cm (H)</p>
-                        <p>Weight: 60 kg</p>
-                        <p>Material: Fabric, Solid Wood</p>
-                        <p>Seating Capacity: 3-seater</p>
-                    </div>
-                    <div class="tab-content">
-                        <h3>Customer Reviews</h3>
-                        <div class="review-item">
-                            <h4>Excellent Sofa!</h4>
-                            <p>⭐⭐⭐⭐⭐ - By Priya S. on June 20, 2025</p>
-                            <p>Absolutely love this sofa! It's so comfortable and looks great in my living room. Delivery was quicker than expected.</p>
-                        </div>
-                        <div class="review-item">
-                            <h4>Good Value</h4>
-                            <p>⭐⭐⭐⭐ - By Rahul K. on June 15, 2025</p>
-                            <p>For the price, this sofa is fantastic. A little firm initially but has softened nicely. Highly recommend.</p>
-                        </div>
-                        <button class="btn">Write a Review</button>
-                    </div>
-                    <div class="tab-content">
-                        <h3>Delivery & Returns</h3>
-                        <p><strong>Delivery:</strong> We offer free standard delivery across Chennai. For other locations in India, shipping charges may apply. Estimated delivery time is 3-5 business days.</p>
-                        <p><strong>Returns:</strong> You can return most new, unopened items within 30 days of delivery for a full refund. Please refer to our <a href="#">Returns Policy</a> for more details.</p>
-                    </div>
-                </div>
-
-                <section class="related-products">
-                    <h2>You Might Also Like</h2>
-                    <div class="product-grid">
-                        <div class="product-card">
-                            <img src="images/coffee_table_product.jpg" alt="Coffee Table">
-                            <h3>Modern Coffee Table</h3>
-                            <p class="price">₹ 12,000</p>
-                            <button class="btn-add-to-cart">Add to Cart</button>
-                        </div>
-                        <div class="product-card">
-                            <img src="images/rug_product.jpg" alt="Area Rug">
-                            <h3>Soft Area Rug</h3>
-                            <p class="price">₹ 7,500</p>
-                            <button class="btn-add-to-cart">Add to Cart</button>
-                        </div>
-                    </div>
-                </section>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <div class="container">
-            <div class="footer-links">
-                <ul>
-                    <li><a href="#">About Us</a></li>
-                    <li><a href="#">FAQs</a></li>
-                    <li><a href="#">Privacy Policy</a></li>
-                    <li><a href="#">Terms of Service</a></li>
-                </ul>
-            </div>
-            <div class="social-media">
-                <a href="#">Facebook</a>
-                <a href="#">Instagram</a>
-                <a href="#">Twitter</a>
-            </div>
-            <p>&copy; 2025 YourFurniture Store. All rights reserved.</p>
-        </div>
-    </footer>
-    <script>
-        // Basic JavaScript for tab functionality (optional)
-        document.addEventListener('DOMContentLoaded', () => {
-            const tabButtons = document.querySelectorAll('.tab-button');
-            const tabContents = document.querySelectorAll('.tab-content');
-
-            tabButtons.forEach(button => {
-                button.addEventListener('click', () => {
-                    tabButtons.forEach(btn => btn.classList.remove('active'));
-                    tabContents.forEach(content => content.classList.remove('active'));
-
-                    button.classList.add('active');
-                    const index = Array.from(tabButtons).indexOf(button);
-                    tabContents[index].classList.add('active');
-                });
-            });
-        });
-    </script>
+    const data = productData[item] || productData['sofa'];
+    document.getElementById('product-title').textContent = data.name;
+    document.getElementById('product-description').textContent = data.desc;
+    document.getElementById('product-image').src = data.img;
+  </script>
 </body>
 </html>
