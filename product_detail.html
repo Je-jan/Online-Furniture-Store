@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Comfort Sofa - CozyHomes Furniture</title>
+</head>
+<body>
+    <header>
+        <h1>CozyHomes Furniture</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="product_listing.html">Shop All</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#cart">Cart (0)</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="product-overview">
+            <div class="product-images">
+                <img src="placeholder_sofa_large.jpg" alt="Modern Comfort Sofa - Front View" style="width:500px;">
+                <div class="thumbnail-gallery">
+                    <img src="placeholder_sofa_thumb1.jpg" alt="Sofa Side View" style="width:100px;">
+                    <img src="placeholder_sofa_thumb2.jpg" alt="Sofa Detail View" style="width:100px;">
+                    <img src="placeholder_sofa_thumb3.jpg" alt="Sofa Room Setup" style="width:100px;">
+                </div>
+            </div>
+
+            <div class="product-info">
+                <h2>Modern Comfort Sofa</h2>
+                <p class="price">₹34,999</p>
+                <p class="availability">In Stock</p>
+
+                <p>A contemporary 3-seater sofa designed for ultimate relaxation. Features plush cushions, durable fabric upholstery, and sturdy wooden legs. Perfect for modern living spaces.</p>
+
+                <h3>Key Features:</h3>
+                <ul>
+                    <li>Dimensions: 220cm (L) x 90cm (W) x 85cm (H)</li>
+                    <li>Material: Polyester Blend Fabric, Solid Wood Frame</li>
+                    <li>Color Options: Grey, Navy Blue, Beige</li>
+                    <li>Removable cushion covers for easy cleaning</li>
+                </ul>
+
+                <form>
+                    <label for="color">Color:</label>
+                    <select id="color" name="color">
+                        <option value="grey">Grey</option>
+                        <option value="navy">Navy Blue</option>
+                        <option value="beige">Beige</option>
+                    </select>
+
+                    <label for="quantity">Quantity:</label>
+                    <input type="number" id="quantity" name="quantity" value="1" min="1" max="5">
+
+                    <button type="submit" onclick="alert('Modern Comfort Sofa (Grey, Qty: 1) added to cart.')">Add to Cart</button>
+                    <button type="button" onclick="alert('Added to Wishlist!')">Add to Wishlist</button>
+                </form>
+            </div>
+        </section>
+
+        <section id="product-description">
+            <h3>Detailed Description</h3>
+            <p>Experience unparalleled comfort with our Modern Comfort Sofa. Its ergonomic design provides excellent back support, while the high-density foam cushions ensure a plush seating experience. The sofa's minimalist aesthetic seamlessly blends with various interior styles, making it a versatile addition to your home. Easy to assemble and maintain, this sofa promises years of enjoyment.</p>
+        </section>
+
+        <section id="reviews">
+            <h3>Customer Reviews (4.5/5 stars)</h3>
+            <div class="review-item">
+                <h4>Comfortable and Stylish!</h4>
+                <p>By Anjali R. on June 20, 2025</p>
+                <p>"The sofa arrived earlier than expected and was easy to set up. It's incredibly comfortable and looks fantastic in my living room. Highly recommend!"</p>
+            </div>
+            <div class="review-item">
+                <h4>Great Value for Money</h4>
+                <p>By Vishal M. on June 15, 2025</p>
+                <p>"For the price, this sofa is excellent. The fabric feels durable and the color is exactly as shown online."</p>
+            </div>
+            <button onclick="alert('Redirecting to write a review form...')">Write a Review</button>
+        </section>
+
+        <section id="related-products">
+            <h3>You Might Also Like</h3>
+            <div class="product-grid">
+                <div class="product-card">
+                    <img src="placeholder_coffee_table.jpg" alt="Coffee Table">
+                    <h3>Elegant Coffee Table</h3>
+                    <p>₹8,500</p>
+                    <button onclick="location.href='product_detail.html?id=coffee-table'">View Details</button>
+                </div>
+                <div class="product-card">
+                    <img src="placeholder_rug.jpg" alt="Area Rug">
+                    <h3>Soft Area Rug</h3>
+                    <p>₹5,999</p>
+                    <button onclick="location.href='product_detail.html?id=area-rug'">View Details</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 CozyHomes Furniture. All rights reserved.</p>
+    </footer>
+</body>
+</html>
