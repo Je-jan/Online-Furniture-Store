@@ -1,157 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Checkout - Your Furniture Store</title>
-    <link rel="stylesheet" href="css/style.css"> </head>
+    <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-K9H2KT7F');</script>
+<!-- End Google Tag Manager -->
+  <meta charset="UTF-8">
+  <title>FurniStyle - Checkout</title>
+  <style>
+    body { font-family: Arial; padding: 40px; background: #f0f0f0; }
+    .checkout-form { max-width: 400px; margin: auto; background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+    h2 { text-align: center; }
+    input, button { width: 100%; padding: 10px; margin-top: 10px; }
+    button { background: #27ae60; color: white; border: none; cursor: pointer; }
+    button:hover { background: #1e8449; }
+    img { display: block; margin: 20px auto 0; width: 100px; }
+  </style>
+</head>
 <body>
-    <header class="checkout-header">
-        <div class="container">
-            <div class="logo">
-                <a href="index.html">YourFurniture</a>
-            </div>
-            <div class="checkout-progress">
-                <span>Shipping &gt;</span>
-                <span>Payment &gt;</span>
-                <span>Review</span>
-            </div>
-        </div>
-    </header>
-
-    <main>
-        <section class="checkout-page">
-            <div class="container">
-                <h1>Secure Checkout</h1>
-                <div class="checkout-grid">
-                    <div class="checkout-form">
-                        <form action="#" method="POST">
-                            <fieldset>
-                                <legend>1. Shipping Information</legend>
-                                <div class="form-group">
-                                    <label for="email">Email</label>
-                                    <input type="email" id="email" name="email" required>
-                                </div>
-                                <div class="form-group">
-                                    <label for="fullname">Full Name</label>
-                                    <input type="text" id="fullname" name="fullname" required>
-                                </div>
-                                <div class="form-group">
-                                    <label for="address">Address</label>
-                                    <input type="text" id="address" name="address" placeholder="Street Address" required>
-                                </div>
-                                <div class="form-group">
-                                    <input type="text" id="apt" name="apt" placeholder="Apartment, suite, etc. (optional)">
-                                </div>
-                                <div class="form-group-inline">
-                                    <div class="form-group">
-                                        <label for="city">City</label>
-                                        <input type="text" id="city" name="city" required>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="state">State</label>
-                                        <input type="text" id="state" name="state" required>
-                                    </div>
-                                </div>
-                                <div class="form-group-inline">
-                                    <div class="form-group">
-                                        <label for="zip">Postal Code</label>
-                                        <input type="text" id="zip" name="zip" required>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="country">Country</label>
-                                        <select id="country" name="country" required>
-                                            <option value="india">India</option>
-                                            </select>
-                                    </div>
-                                </div>
-                            </fieldset>
-
-                            <fieldset>
-                                <legend>2. Shipping Method</legend>
-                                <div class="shipping-option">
-                                    <input type="radio" id="standard-shipping" name="shipping-method" value="standard" checked>
-                                    <label for="standard-shipping">Standard Shipping (3-5 Business Days) - Free</label>
-                                </div>
-                                <div class="shipping-option">
-                                    <input type="radio" id="express-shipping" name="shipping-method" value="express">
-                                    <label for="express-shipping">Express Shipping (1-2 Business Days) - ₹ 500</label>
-                                </div>
-                            </fieldset>
-
-                            <fieldset>
-                                <legend>3. Payment Information</legend>
-                                <div class="form-group">
-                                    <label for="card-name">Name on Card</label>
-                                    <input type="text" id="card-name" name="card-name" required>
-                                </div>
-                                <div class="form-group">
-                                    <label for="card-number">Card Number</label>
-                                    <input type="text" id="card-number" name="card-number" placeholder="XXXX XXXX XXXX XXXX" required>
-                                </div>
-                                <div class="form-group-inline">
-                                    <div class="form-group">
-                                        <label for="expiry-date">Expiry Date</label>
-                                        <input type="text" id="expiry-date" name="expiry-date" placeholder="MM/YY" required>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="cvv">CVV</label>
-                                        <input type="text" id="cvv" name="cvv" placeholder="XXX" required>
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <input type="checkbox" id="billing-same" name="billing-same" checked>
-                                    <label for="billing-same">Billing address same as shipping</label>
-                                </div>
-                                <div class="form-group">
-                                    <label for="coupon-code">Coupon Code (optional)</label>
-                                    <input type="text" id="coupon-code" name="coupon-code">
-                                    <button type="button" class="btn-small">Apply</button>
-                                </div>
-                            </fieldset>
-
-                            <button type="submit" class="btn place-order-btn">Place Order</button>
-                        </form>
-                    </div>
-
-                    <div class="order-summary">
-                        <h2>Order Summary</h2>
-                        <div class="summary-item">
-                            <img src="images/sofa_product_small.jpg" alt="Modern Comfort Sofa">
-                            <div class="item-details">
-                                <h4>Modern Comfort Sofa</h4>
-                                <p>Qty: 1</p>
-                                <p>₹ 45,000</p>
-                            </div>
-                        </div>
-                        <div class="summary-item">
-                            <img src="images/coffee_table_product_small.jpg" alt="Modern Coffee Table">
-                            <div class="item-details">
-                                <h4>Modern Coffee Table</h4>
-                                <p>Qty: 1</p>
-                                <p>₹ 12,000</p>
-                            </div>
-                        </div>
-                        <div class="summary-totals">
-                            <p>Subtotal: <span>₹ 57,000</span></p>
-                            <p>Shipping: <span>Free</span></p>
-                            <p>Tax: <span>₹ 0.00</span></p>
-                            <h3>Total: <span>₹ 57,000</span></h3>
-                        </div>
-                        <div class="security-info">
-                            <p>🔒 Secure checkout</p>
-                            <p>Need help? Contact us: <a href="tel:+918001234567">+91 800 123 4567</a></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer class="checkout-footer">
-        <div class="container">
-            <p>&copy; 2025 YourFurniture Store. All rights reserved.</p>
-        </div>
-    </footer>
+    <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K9H2KT7F"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+  <div class="checkout-form">
+    <h2>Checkout</h2>
+    <img src="https://via.placeholder.com/100?text=Cart" alt="Cart Icon">
+    <input type="text" placeholder="Full Name" required>
+    <input type="email" placeholder="Email" required>
+    <input type="text" placeholder="Shipping Address" required>
+    <input type="text" placeholder="Card Number" required>
+    <button>Place Order</button>
+  </div>
 </body>
 </html>
