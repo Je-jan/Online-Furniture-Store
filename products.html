@@ -1,151 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shop All Furniture - Your Furniture Store</title>
-    <link rel="stylesheet" href="css/style.css"> </head>
+    <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-K9H2KT7F');</script>
+<!-- End Google Tag Manager -->
+  <meta charset="UTF-8">
+  <title>FurniStyle - Products</title>
+  <style>
+    body { font-family: Arial; padding: 40px; background: #fff; }
+    h1 { text-align: center; }
+    .product-list { display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; }
+    .product { border: 1px solid #ccc; padding: 10px; width: 200px; text-align: center; background: #f9f9f9; border-radius: 8px; }
+    .product img { width: 100%; height: 150px; object-fit: cover; border-radius: 4px; }
+    a { text-decoration: none; color: #2e86de; display: block; margin-top: 10px; }
+  </style>
+</head>
 <body>
-    <header>
-        <div class="container">
-            <div class="logo">
-                <a href="index.html">YourFurniture</a>
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="products.html">Shop</a></li>
-                    <li><a href="#">About Us</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
-            </nav>
-            <div class="header-icons">
-                <input type="text" placeholder="Search...">
-                <a href="#">Account</a>
-                <a href="#">Cart (0)</a>
-            </div>
-        </div>
-    </header>
-
-    <main>
-        <section class="product-listing">
-            <div class="container">
-                <nav class="breadcrumbs">
-                    <a href="index.html">Home</a> &gt; <span>Shop All</span>
-                </nav>
-                <h1>All Furniture</h1>
-
-                <div class="listing-content">
-                    <aside class="sidebar-filters">
-                        <h3>Categories</h3>
-                        <ul>
-                            <li><a href="#">Sofas</a></li>
-                            <li><a href="#">Beds</a></li>
-                            <li><a href="#">Chairs</a></li>
-                            <li><a href="#">Tables</a></li>
-                        </ul>
-
-                        <h3>Price Range</h3>
-                        <input type="range" min="0" max="100000" value="50000">
-
-                        <h3>Material</h3>
-                        <div><input type="checkbox"> Wood</div>
-                        <div><input type="checkbox"> Metal</div>
-                        <div><input type="checkbox"> Fabric</div>
-                    </aside>
-
-                    <div class="products-main">
-                        <div class="sort-options">
-                            <label for="sort-by">Sort by:</label>
-                            <select id="sort-by">
-                                <option value="popularity">Popularity</option>
-                                <option value="price-asc">Price: Low to High</option>
-                                <option value="price-desc">Price: High to Low</option>
-                                <option value="newest">Newest Arrivals</option>
-                            </select>
-                        </div>
-
-                        <div class="product-grid">
-                            <div class="product-card">
-                                <a href="product-details.html">
-                                    <img src="images/sofa_product.jpg" alt="Modern Sofa">
-                                    <h3>Modern Comfort Sofa</h3>
-                                </a>
-                                <p class="price">₹ 45,000</p>
-                                <button class="btn-add-to-cart">Add to Cart</button>
-                            </div>
-                            <div class="product-card">
-                                <a href="product-details.html">
-                                    <img src="images/bed_product.jpg" alt="Classic Queen Bed">
-                                    <h3>Classic Queen Bed</h3>
-                                </a>
-                                <p class="price">₹ 32,000</p>
-                                <button class="btn-add-to-cart">Add to Cart</button>
-                            </div>
-                            <div class="product-card">
-                                <a href="product-details.html">
-                                    <img src="images/chair_product.jpg" alt="Ergonomic Office Chair">
-                                    <h3>Ergonomic Office Chair</h3>
-                                </a>
-                                <p class="price">₹ 15,000</p>
-                                <button class="btn-add-to-cart">Add to Cart</button>
-                            </div>
-                            <div class="product-card">
-                                <a href="product-details.html">
-                                    <img src="images/dining_table_product.jpg" alt="Dining Table">
-                                    <h3>Elegant Dining Table</h3>
-                                </a>
-                                <p class="price">₹ 28,000</p>
-                                <button class="btn-add-to-cart">Add to Cart</button>
-                            </div>
-                            <div class="product-card">
-                                <a href="product-details.html">
-                                    <img src="images/wardrobe_product.jpg" alt="Wardrobe">
-                                    <h3>Spacious Wardrobe</h3>
-                                </a>
-                                <p class="price">₹ 22,000</p>
-                                <button class="btn-add-to-cart">Add to Cart</button>
-                            </div>
-                            <div class="product-card">
-                                <a href="product-details.html">
-                                    <img src="images/bookshelf_product.jpg" alt="Bookshelf">
-                                    <h3>Modern Bookshelf</h3>
-                                </a>
-                                <p class="price">₹ 8,500</p>
-                                <button class="btn-add-to-cart">Add to Cart</button>
-                            </div>
-                            </div>
-
-                        <div class="pagination">
-                            <a href="#">&laquo; Previous</a>
-                            <a href="#" class="active">1</a>
-                            <a href="#">2</a>
-                            <a href="#">3</a>
-                            <a href="#">Next &raquo;</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <div class="container">
-            <div class="footer-links">
-                <ul>
-                    <li><a href="#">About Us</a></li>
-                    <li><a href="#">FAQs</a></li>
-                    <li><a href="#">Privacy Policy</a></li>
-                    <li><a href="#">Terms of Service</a></li>
-                </ul>
-            </div>
-            <div class="social-media">
-                <a href="#">Facebook</a>
-                <a href="#">Instagram</a>
-                <a href="#">Twitter</a>
-            </div>
-            <p>&copy; 2025 YourFurniture Store. All rights reserved.</p>
-        </div>
-    </footer>
+    <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K9H2KT7F"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+  <h1>Our Products</h1>
+  <div class="product-list">
+    <div class="product">
+      <img src="https://via.placeholder.com/200x150?text=Luxury+Sofa" alt="Sofa">
+      <h3>Luxury Sofa</h3>
+      <a href="product-details.html?item=sofa">View Details</a>
+    </div>
+    <div class="product">
+      <img src="https://via.placeholder.com/200x150?text=Ergonomic+Chair" alt="Chair">
+      <h3>Ergonomic Chair</h3>
+      <a href="product-details.html?item=chair">View Details</a>
+    </div>
+    <div class="product">
+      <img src="https://via.placeholder.com/200x150?text=Dining+Table" alt="Table">
+      <h3>Dining Table</h3>
+      <a href="product-details.html?item=table">View Details</a>
+    </div>
+  </div>
 </body>
 </html>
