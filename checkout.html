@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - CozyHomes Furniture</title>
+</head>
+<body>
+    <header>
+        <h1>CozyHomes Furniture</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="product_listing.html">Shop All</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#cart">Cart (X)</a></li> </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Checkout</h2>
+
+        <section id="order-summary">
+            <h3>Your Order</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Product</th>
+                        <th>Quantity</th>
+                        <th>Price</th>
+                        <th>Subtotal</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Modern Comfort Sofa (Grey)</td>
+                        <td>1</td>
+                        <td>₹34,999</td>
+                        <td>₹34,999</td>
+                    </tr>
+                    <tr>
+                        <td>Elegant Coffee Table</td>
+                        <td>1</td>
+                        <td>₹8,500</td>
+                        <td>₹8,500</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="3">Shipping (Standard)</td>
+                        <td>₹1,500</td>
+                    </tr>
+                    <tr>
+                        <td colspan="3"><strong>Total</strong></td>
+                        <td><strong>₹44,999</strong></td>
+                    </tr>
+                </tfoot>
+            </table>
+            <button onclick="alert('Redirecting to Product Listing to add more items.')">Continue Shopping</button>
+        </section>
+
+        <section id="shipping-information">
+            <h3>Shipping Information</h3>
+            <form>
+                <label for="full-name">Full Name:</label>
+                <input type="text" id="full-name" name="full-name" required><br><br>
+
+                <label for="address-line1">Address Line 1:</label>
+                <input type="text" id="address-line1" name="address-line1" required><br><br>
+
+                <label for="address-line2">Address Line 2 (Optional):</label>
+                <input type="text" id="address-line2" name="address-line2"><br><br>
+
+                <label for="city">City:</label>
+                <input type="text" id="city" name="city" required><br><br>
+
+                <label for="state">State/Province:</label>
+                <input type="text" id="state" name="state" required><br><br>
+
+                <label for="zip-code">Zip/Postal Code:</label>
+                <input type="text" id="zip-code" name="zip-code" required><br><br>
+
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" required><br><br>
+            </form>
+        </section>
+
+        <section id="payment-information">
+            <h3>Payment Information</h3>
+            <form>
+                <label for="payment-method">Payment Method:</label>
+                <select id="payment-method" name="payment-method" required>
+                    <option value="">Select Method</option>
+                    <option value="credit-card">Credit Card</option>
+                    <option value="debit-card">Debit Card</option>
+                    <option value="net-banking">Net Banking</option>
+                    <option value="upi">UPI</option>
+                </select><br><br>
+
+                <div id="credit-card-details" style="display: block;">
+                    <label for="card-number">Card Number:</label>
+                    <input type="text" id="card-number" name="card-number" placeholder="XXXX XXXX XXXX XXXX" required><br><br>
+
+                    <label for="expiry-date">Expiry Date (MM/YY):</label>
+                    <input type="text" id="expiry-date" name="expiry-date" placeholder="MM/YY" required><br><br>
+
+                    <label for="cvv">CVV:</label>
+                    <input type="text" id="cvv" name="cvv" placeholder="XXX" required><br><br>
+                </div>
+
+                <input type="checkbox" id="save-info" name="save-info">
+                <label for="save-info">Save my information for faster checkout</label><br><br>
+            </form>
+        </section>
+
+        <section id="order-confirmation">
+            <button onclick="alert('Thank you for your order! Your order #CH12345 has been placed and a confirmation email sent.')">Place Order</button>
+            <p>By placing your order, you agree to our <a href="#terms">Terms and Conditions</a> and <a href="#privacy">Privacy Policy</a>.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 CozyHomes Furniture. All rights reserved.</p>
+    </footer>
+</body>
+</html>
