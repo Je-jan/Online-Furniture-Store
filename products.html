@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop All Furniture - Your Furniture Store</title>
+    <link rel="stylesheet" href="css/style.css"> </head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">YourFurniture</a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Shop</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-icons">
+                <input type="text" placeholder="Search...">
+                <a href="#">Account</a>
+                <a href="#">Cart (0)</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="product-listing">
+            <div class="container">
+                <nav class="breadcrumbs">
+                    <a href="index.html">Home</a> &gt; <span>Shop All</span>
+                </nav>
+                <h1>All Furniture</h1>
+
+                <div class="listing-content">
+                    <aside class="sidebar-filters">
+                        <h3>Categories</h3>
+                        <ul>
+                            <li><a href="#">Sofas</a></li>
+                            <li><a href="#">Beds</a></li>
+                            <li><a href="#">Chairs</a></li>
+                            <li><a href="#">Tables</a></li>
+                        </ul>
+
+                        <h3>Price Range</h3>
+                        <input type="range" min="0" max="100000" value="50000">
+
+                        <h3>Material</h3>
+                        <div><input type="checkbox"> Wood</div>
+                        <div><input type="checkbox"> Metal</div>
+                        <div><input type="checkbox"> Fabric</div>
+                    </aside>
+
+                    <div class="products-main">
+                        <div class="sort-options">
+                            <label for="sort-by">Sort by:</label>
+                            <select id="sort-by">
+                                <option value="popularity">Popularity</option>
+                                <option value="price-asc">Price: Low to High</option>
+                                <option value="price-desc">Price: High to Low</option>
+                                <option value="newest">Newest Arrivals</option>
+                            </select>
+                        </div>
+
+                        <div class="product-grid">
+                            <div class="product-card">
+                                <a href="product-details.html">
+                                    <img src="images/sofa_product.jpg" alt="Modern Sofa">
+                                    <h3>Modern Comfort Sofa</h3>
+                                </a>
+                                <p class="price">₹ 45,000</p>
+                                <button class="btn-add-to-cart">Add to Cart</button>
+                            </div>
+                            <div class="product-card">
+                                <a href="product-details.html">
+                                    <img src="images/bed_product.jpg" alt="Classic Queen Bed">
+                                    <h3>Classic Queen Bed</h3>
+                                </a>
+                                <p class="price">₹ 32,000</p>
+                                <button class="btn-add-to-cart">Add to Cart</button>
+                            </div>
+                            <div class="product-card">
+                                <a href="product-details.html">
+                                    <img src="images/chair_product.jpg" alt="Ergonomic Office Chair">
+                                    <h3>Ergonomic Office Chair</h3>
+                                </a>
+                                <p class="price">₹ 15,000</p>
+                                <button class="btn-add-to-cart">Add to Cart</button>
+                            </div>
+                            <div class="product-card">
+                                <a href="product-details.html">
+                                    <img src="images/dining_table_product.jpg" alt="Dining Table">
+                                    <h3>Elegant Dining Table</h3>
+                                </a>
+                                <p class="price">₹ 28,000</p>
+                                <button class="btn-add-to-cart">Add to Cart</button>
+                            </div>
+                            <div class="product-card">
+                                <a href="product-details.html">
+                                    <img src="images/wardrobe_product.jpg" alt="Wardrobe">
+                                    <h3>Spacious Wardrobe</h3>
+                                </a>
+                                <p class="price">₹ 22,000</p>
+                                <button class="btn-add-to-cart">Add to Cart</button>
+                            </div>
+                            <div class="product-card">
+                                <a href="product-details.html">
+                                    <img src="images/bookshelf_product.jpg" alt="Bookshelf">
+                                    <h3>Modern Bookshelf</h3>
+                                </a>
+                                <p class="price">₹ 8,500</p>
+                                <button class="btn-add-to-cart">Add to Cart</button>
+                            </div>
+                            </div>
+
+                        <div class="pagination">
+                            <a href="#">&laquo; Previous</a>
+                            <a href="#" class="active">1</a>
+                            <a href="#">2</a>
+                            <a href="#">3</a>
+                            <a href="#">Next &raquo;</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">FAQs</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                </ul>
+            </div>
+            <div class="social-media">
+                <a href="#">Facebook</a>
+                <a href="#">Instagram</a>
+                <a href="#">Twitter</a>
+            </div>
+            <p>&copy; 2025 YourFurniture Store. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
