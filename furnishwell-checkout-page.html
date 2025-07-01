@@ -60,7 +60,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <!-- Shipping and Payment Information -->
                 <div class="lg:w-2/3 bg-white rounded-xl shadow-lg p-8 md:p-10">
                     <h2 class="text-3xl font-bold text-gray-900 mb-8">Shipping Information</h2>
-                    <form>
+                    <form id="checkoutForm"> <!-- Added an ID to the form -->
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
                             <div>
                                 <label for="fullName" class="block text-gray-700 text-sm font-bold mb-2">Full Name</label>
@@ -157,7 +157,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         </div>
                     </div>
 
-                    <button class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-4 px-8 rounded-full shadow-lg transition duration-300 transform hover:scale-105">
+                    <!-- Updated Place Order Button with onclick event -->
+                    <button type="button" onclick="window.location.href='confirmation.html';" class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-4 px-8 rounded-full shadow-lg transition duration-300 transform hover:scale-105">
                         Place Order
                     </button>
                 </div>
@@ -216,4 +217,3 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 </body>
 </html>
-
