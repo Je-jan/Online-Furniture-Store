@@ -1,277 +1,240 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-K9H2KT7F');</script>
-<!-- End Google Tag Manager -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FurnishWell - Home</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>FurnishWell - Your Home, Our Furniture</title>
+    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Inter font from Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #f7fafc; /* Light gray background */
+            background-color: #f8fafc; /* Light blue-gray background */
         }
     </style>
 </head>
-<body class="antialiased text-gray-800">
-  <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K9H2KT7F"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
-    <!-- Header -->
-    <header class="bg-white shadow-sm py-4">
-        <nav class="container mx-auto px-4 flex justify-between items-center">
-            <a href="#" class="text-3xl font-bold text-gray-900">FurnishWell</a>
-            <div class="space-x-6 hidden md:flex">
-                <a href="#" class="text-gray-600 hover:text-gray-900">Home</a>
-                <a href="#products" class="text-gray-600 hover:text-gray-900">Products</a>
-                <a href="#about" class="text-gray-600 hover:text-gray-900">About Us</a>
-                <a href="#contact" class="text-gray-600 hover:text-gray-900">Contact</a>
-            </div>
-            <div class="flex items-center space-x-4">
-                <button class="text-gray-600 hover:text-gray-900">
-                    <!-- Search Icon (SVG from Lucide React equivalent for simplicity) -->
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-search"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
-                </button>
-                <button class="text-gray-600 hover:text-gray-900">
-                    <!-- Cart Icon (SVG) -->
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shopping-cart"><circle cx="8" cy="21" r="1"/><circle cx="19" cy="21" r="1"/><path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57L23 4H6"/></svg>
-                </button>
-            </div>
-        </nav>
+<body class="text-gray-800">
+
+    <!-- Header Section -->
+    <header class="bg-white shadow-md py-4">
+        <div class="container mx-auto px-4 flex justify-between items-center">
+            <!-- Logo -->
+            <a href="index.html" class="text-3xl font-bold text-indigo-700 rounded-md p-2">FurnishWell</a>
+
+            <!-- Navigation Menu -->
+            <nav class="hidden md:flex space-x-6">
+                <a href="index.html" class="text-indigo-700 font-semibold transition duration-300 rounded-md p-2">Home</a>
+                <a href="furnishwell-product-listing.html" class="text-gray-600 hover:text-indigo-700 transition duration-300 rounded-md p-2">Shop</a>
+                <a href="#" class="text-gray-600 hover:text-indigo-700 transition duration-300 rounded-md p-2">About Us</a>
+                <a href="#" class="text-gray-600 hover:text-indigo-700 transition duration-300 rounded-md p-2">Contact</a>
+            </nav>
+
+            <!-- Mobile Menu Button (Hamburger) -->
+            <button class="md:hidden text-gray-600 hover:text-indigo-700 focus:outline-none">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </div>
     </header>
 
-    <main>
-        <!-- Hero Section -->
-        <section class="relative bg-gradient-to-r from-blue-300 to-indigo-500 h-[60vh] md:h-[80vh] flex items-center justify-center text-white overflow-hidden rounded-b-lg shadow-lg">
-            <img src="https://placehold.co/1920x1080/4F46E5/ffffff?text=Modern+Living+Space" 
-                 alt="Modern Living Space" 
-                 class="absolute inset-0 w-full h-full object-cover opacity-75"
-                 onerror="this.onerror=null;this.src='https://placehold.co/1920x1080/4F46E5/ffffff?text=Image+Unavailable';">
-            <div class="relative z-10 text-center px-4">
-                <h1 class="text-4xl md:text-6xl font-extrabold mb-4 drop-shadow-lg">FurnishWell</h1>
-                <p class="text-lg md:text-2xl mb-8 max-w-2xl mx-auto drop-shadow-md">Discover unparalleled comfort and style for every corner of your home.</p>
-                <a href="/product-listing.html" class="inline-block bg-white text-indigo-700 hover:bg-gray-100 font-bold py-3 px-8 rounded-full shadow-lg transition duration-300 ease-in-out transform hover:scale-105">Shop Our New Arrivals</a>
-            </div>
-        </section>
-
-        <!-- Featured Categories -->
-        <section class="container mx-auto px-4 py-16">
-            <h2 class="text-3xl font-bold text-center mb-10">Shop by Category</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <a href="#products" class="block bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition duration-300 transform hover:-translate-y-1">
-                    <img src="https://placehold.co/400x250/A3E635/000?text=Living+Room" 
-                         alt="Living Room Furniture" 
-                         class="w-full h-48 object-cover"
-                         onerror="this.onerror=null;this.src='https://placehold.co/400x250/A3E635/000?text=Loading...';">
-                    <div class="p-6 text-center">
-                        <h3 class="text-xl font-semibold mb-2">Living Room</h3>
-                        <p class="text-gray-600">Sofas, Coffee Tables, TV Units & more.</p>
-                    </div>
-                </a>
-                <a href="#products" class="block bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition duration-300 transform hover:-translate-y-1">
-                    <img src="https://placehold.co/400x250/FCD34D/000?text=Bedroom" 
-                         alt="Bedroom Furniture" 
-                         class="w-full h-48 object-cover"
-                         onerror="this.onerror=null;this.src='https://placehold.co/400x250/FCD34D/000?text=Loading...';">
-                    <div class="p-6 text-center">
-                        <h3 class="text-xl font-semibold mb-2">Bedroom</h3>
-                        <p class="text-gray-600">Beds, Wardrobes, Dressers & more.</p>
-                    </div>
-                </a>
-                <a href="#products" class="block bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition duration-300 transform hover:-translate-y-1">
-                    <img src="https://placehold.co/400x250/F87171/000?text=Dining" 
-                         alt="Dining Room Furniture" 
-                         class="w-full h-48 object-cover"
-                         onerror="this.onerror=null;this.src='https://placehold.co/400x250/F87171/000?text=Loading...';">
-                    <div class="p-6 text-center">
-                        <h3 class="text-xl font-semibold mb-2">Dining Room</h3>
-                        <p class="text-gray-600">Dining Tables, Chairs, Buffets & more.</p>
-                    </div>
-                </a>
-                <a href="#products" class="block bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition duration-300 transform hover:-translate-y-1">
-                    <img src="https://placehold.co/400x250/93C5FD/000?text=Outdoor" 
-                         alt="Outdoor Furniture" 
-                         class="w-full h-48 object-cover"
-                         onerror="this.onerror=null;this.src='https://placehold.co/400x250/93C5FD/000?text=Loading...';">
-                    <div class="p-6 text-center">
-                        <h3 class="text-xl font-semibold mb-2">Outdoor</h3>
-                        <p class="text-gray-600">Patio Sets, Loungers, Garden Decor & more.</p>
-                    </div>
+    <!-- Hero Section -->
+    <section class="bg-indigo-600 text-white py-20 px-4 rounded-b-lg shadow-lg">
+        <div class="container mx-auto flex flex-col md:flex-row items-center justify-between">
+            <div class="md:w-1/2 text-center md:text-left mb-8 md:mb-0">
+                <h1 class="text-5xl md:text-6xl font-extrabold leading-tight mb-6">
+                    Elevate Your Space with <span class="text-yellow-300">Timeless</span> Furniture
+                </h1>
+                <p class="text-xl md:text-2xl mb-8 opacity-90">
+                    Discover exquisite designs and unparalleled comfort for every room.
+                </p>
+                <a href="furnishwell-product-listing.html" class="bg-yellow-400 hover:bg-yellow-500 text-indigo-900 font-bold py-4 px-8 rounded-full shadow-lg transition duration-300 transform hover:scale-105">
+                    Shop Now
                 </a>
             </div>
-        </section>
+            <div class="md:w-1/2 flex justify-center">
+                <!-- Placeholder Image for Hero -->
+                <img src="https://placehold.co/600x400/667EEA/FFFFFF?text=Modern+Living+Room" alt="Modern Living Room Furniture" class="rounded-lg shadow-xl max-w-full h-auto">
+            </div>
+        </div>
+    </section>
 
-        <!-- Best Sellers/Trending Products -->
-        <section class="container mx-auto px-4 py-16 bg-white rounded-lg shadow-lg mb-16">
-            <h2 class="text-3xl font-bold text-center mb-10">Our Best Sellers</h2>
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
-                <!-- Product Card 1 -->
-                <div class="bg-gray-50 rounded-xl shadow-md overflow-hidden hover:shadow-lg transition duration-300">
-                    <img src="https://placehold.co/600x400/D1D5DB/000?text=Modern+Sofa" 
-                         alt="Modern Sofa" 
-                         class="w-full h-48 object-cover"
-                         onerror="this.onerror=null;this.src='https://placehold.co/600x400/D1D5DB/000?text=Image+Unavailable';">
-                    <div class="p-5">
-                        <h3 class="font-semibold text-lg mb-1">Comfort Cloud Sofa</h3>
-                        <p class="text-gray-600 text-sm">Plush fabric, ergonomic design.</p>
-                        <div class="flex items-center justify-between mt-3">
-                            <span class="text-xl font-bold text-indigo-700">$999.00</span>
-                            <button class="bg-indigo-600 text-white py-2 px-4 rounded-full text-sm hover:bg-indigo-700 transition duration-300">Add to Cart</button>
+    <!-- Product Categories Section -->
+    <section class="py-16 px-4">
+        <div class="container mx-auto">
+            <h2 class="text-4xl font-bold text-center mb-12 text-indigo-800">Explore Our Categories</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Category Card 1 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition duration-300">
+                    <a href="furnishwell-product-listing.html" class="block">
+                        <img src="https://placehold.co/400x250/FEEBC8/9B2C2C?text=Sofas+%26+Seating" alt="Sofas & Seating" class="w-full h-48 object-cover">
+                        <div class="p-6 text-center">
+                            <h3 class="text-xl font-semibold text-gray-900 mb-2">Sofas & Seating</h3>
+                            <p class="text-gray-600 text-sm">Comfort meets style.</p>
+                            <span class="mt-4 inline-block text-indigo-600 hover:text-indigo-800 font-medium transition duration-300">View All &rarr;</span>
                         </div>
-                    </div>
-                </div>
-                <!-- Product Card 2 -->
-                <div class="bg-gray-50 rounded-xl shadow-md overflow-hidden hover:shadow-lg transition duration-300">
-                    <img src="https://placehold.co/600x400/A78BFA/FFF?text=Minimalist+Bed" 
-                         alt="Minimalist Bed Frame" 
-                         class="w-full h-48 object-cover"
-                         onerror="this.onerror=null;this.src='https://placehold.co/600x400/A78BFA/FFF?text=Image+Unavailable';">
-                    <div class="p-5">
-                        <h3 class="font-semibold text-lg mb-1">Zen Bed Frame</h3>
-                        <p class="text-gray-600 text-sm">Solid wood, clean lines.</p>
-                        <div class="flex items-center justify-between mt-3">
-                            <span class="text-xl font-bold text-indigo-700">$749.00</span>
-                            <button class="bg-indigo-600 text-white py-2 px-4 rounded-full text-sm hover:bg-indigo-700 transition duration-300">Add to Cart</button>
-                        </div>
-                    </div>
-                </div>
-                <!-- Product Card 3 -->
-                <div class="bg-gray-50 rounded-xl shadow-md overflow-hidden hover:shadow-lg transition duration-300">
-                    <img src="https://placehold.co/600x400/6EE7B7/000?text=Industrial+Table" 
-                         alt="Industrial Dining Table" 
-                         class="w-full h-48 object-cover"
-                         onerror="this.onerror=null;this.src='https://placehold.co/600x400/6EE7B7/000?text=Image+Unavailable';">
-                    <div class="p-5">
-                        <h3 class="font-semibold text-lg mb-1">Loft Dining Table</h3>
-                        <p class="text-gray-600 text-sm">Metal and reclaimed wood.</p>
-                        <div class="flex items-center justify-between mt-3">
-                            <span class="text-xl font-bold text-indigo-700">$599.00</span>
-                            <button class="bg-indigo-600 text-white py-2 px-4 rounded-full text-sm hover:bg-indigo-700 transition duration-300">Add to Cart</button>
-                        </div>
-                    </div>
-                </div>
-                <!-- Product Card 4 -->
-                <div class="bg-gray-50 rounded-xl shadow-md overflow-hidden hover:shadow-lg transition duration-300">
-                    <img src="https://placehold.co/600x400/FDBA74/000?text=Outdoor+Chair" 
-                         alt="Outdoor Lounge Chair" 
-                         class="w-full h-48 object-cover"
-                         onerror="this.onerror=null;this.src='https://placehold.co/600x400/FDBA74/000?text=Image+Unavailable';">
-                    <div class="p-5">
-                        <h3 class="font-semibold text-lg mb-1">Sunburst Lounge Chair</h3>
-                        <p class="text-gray-600 text-sm">Weather-resistant, comfy.</p>
-                        <div class="flex items-center justify-between mt-3">
-                            <span class="text-xl font-bold text-indigo-700">$249.00</span>
-                            <button class="bg-indigo-600 text-white py-2 px-4 rounded-full text-sm hover:bg-indigo-700 transition duration-300">Add to Cart</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Promotional Banner -->
-        <section class="container mx-auto px-4 py-12 bg-indigo-700 text-white rounded-lg shadow-lg flex flex-col md:flex-row items-center justify-between text-center md:text-left mb-16">
-            <div class="mb-6 md:mb-0">
-                <h2 class="text-3xl font-bold mb-2">Summer Sale! Up to 40% Off!</h2>
-                <p class="text-lg">Don't miss out on amazing deals for your home.</p>
-            </div>
-            <a href="/product-listing.html" class="inline-block bg-white text-indigo-700 hover:bg-gray-100 font-bold py-3 px-8 rounded-full shadow-lg transition duration-300 transform hover:scale-105">Shop Now</a>
-        </section>
-
-        <!-- Customer Testimonials -->
-        <section class="container mx-auto px-4 py-16">
-            <h2 class="text-3xl font-bold text-center mb-10">What Our Customers Say</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div class="bg-white p-8 rounded-xl shadow-md">
-                    <p class="italic text-lg mb-4">"FurnishWell transformed my living room! The quality is exceptional and the delivery was super fast. Highly recommend!"</p>
-                    <div class="flex items-center">
-                        <img src="https://placehold.co/60x60/CBD5E1/4A5568?text=JD" alt="Customer Avatar" class="w-12 h-12 rounded-full mr-4 object-cover">
-                        <div>
-                            <p class="font-semibold">Jane Doe</p>
-                            <p class="text-sm text-gray-500">Happy Customer</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="bg-white p-8 rounded-xl shadow-md">
-                    <p class="italic text-lg mb-4">"Absolutely love my new bedroom set. The website was easy to navigate and the customer service was fantastic."</p>
-                    <div class="flex items-center">
-                        <img src="https://placehold.co/60x60/CBD5E1/4A5568?text=AS" alt="Customer Avatar" class="w-12 h-12 rounded-full mr-4 object-cover">
-                        <div>
-                            <p class="font-semibold">Alex Smith</p>
-                            <p class="text-sm text-gray-500">Verified Buyer</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Newsletter Signup -->
-        <section class="bg-gray-100 py-16">
-            <div class="container mx-auto px-4 text-center">
-                <h2 class="text-3xl font-bold mb-4">Stay Connected!</h2>
-                <p class="text-lg text-gray-700 mb-8">Sign up for our newsletter to get the latest updates, exclusive offers, and design tips directly to your inbox.</p>
-                <form class="max-w-xl mx-auto flex flex-col sm:flex-row gap-4">
-                    <input type="email" placeholder="Your email address" class="flex-grow p-4 rounded-xl border border-gray-300 focus:ring-2 focus:ring-indigo-500 focus:border-transparent outline-none shadow-sm" required>
-                    <button type="submit" class="bg-indigo-600 text-white font-bold py-4 px-8 rounded-xl hover:bg-indigo-700 transition duration-300 shadow-md">Subscribe</button>
-                </form>
-            </div>
-        </section>
-    </main>
-
-    <!-- Footer -->
-    <footer class="bg-gray-900 text-gray-300 py-12 mt-16">
-        <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-8">
-            <div>
-                <h3 class="text-xl font-bold mb-4 text-white">FurnishWell</h3>
-                <p class="text-sm">Your premier destination for high-quality, stylish furniture.</p>
-            </div>
-            <div>
-                <h4 class="font-semibold text-white mb-4">Quick Links</h4>
-                <ul class="space-y-2">
-                    <li><a href="#" class="hover:text-white transition duration-200">Home</a></li>
-                    <li><a href="#products" class="hover:text-white transition duration-200">Products</a></li>
-                    <li><a href="#about" class="hover:text-white transition duration-200">About Us</a></li>
-                    <li><a href="#contact" class="hover:text-white transition duration-200">Contact</a></li>
-                </ul>
-            </div>
-            <div>
-                <h4 class="font-semibold text-white mb-4">Customer Service</h4>
-                <ul class="space-y-2">
-                    <li><a href="#" class="hover:text-white transition duration-200">FAQ</a></li>
-                    <li><a href="#" class="hover:text-white transition duration-200">Shipping & Returns</a></li>
-                    <li><a href="#" class="hover:text-white transition duration-200">Order Tracking</a></li>
-                    <li><a href="#" class="hover:text-white transition duration-200">Privacy Policy</a></li>
-                </ul>
-            </div>
-            <div>
-                <h4 class="font-semibold text-white mb-4">Connect With Us</h4>
-                <div class="flex space-x-4">
-                    <a href="#" class="text-gray-400 hover:text-white transition duration-200">
-                        <!-- Facebook Icon (SVG) -->
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" class="lucide lucide-facebook"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
                     </a>
-                    <a href="#" class="text-gray-400 hover:text-white transition duration-200">
-                        <!-- Twitter Icon (SVG) -->
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" class="lucide lucide-twitter"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17-17 17-2.7 0-4.9-1.2-5-1.9 4.4-4.8 17-11.2 18.4-12.6 7.1-6.8 13.4-12 17.8-12 7 0 20 2.6 20 2.6z"/></svg>
+                </div>
+                <!-- Category Card 2 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition duration-300">
+                    <a href="furnishwell-product-listing.html" class="block">
+                        <img src="https://placehold.co/400x250/E9D8FD/4A2C7B?text=Tables+%26+Desks" alt="Tables & Desks" class="w-full h-48 object-cover">
+                        <div class="p-6 text-center">
+                            <h3 class="text-xl font-semibold text-gray-900 mb-2">Tables & Desks</h3>
+                            <p class="text-gray-600 text-sm">Functional and elegant.</p>
+                            <span class="mt-4 inline-block text-indigo-600 hover:text-indigo-800 font-medium transition duration-300">View All &rarr;</span>
+                        </div>
                     </a>
-                    <a href="#" class="text-gray-400 hover:text-white transition duration-200">
-                        <!-- Instagram Icon (SVG) -->
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" class="lucide lucide-instagram"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+                </div>
+                <!-- Category Card 3 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition duration-300">
+                    <a href="furnishwell-product-listing.html" class="block">
+                        <img src="https://placehold.co/400x250/FEE2E2/C53030?text=Beds+%26+Bedroom" alt="Beds & Bedroom" class="w-full h-48 object-cover">
+                        <div class="p-6 text-center">
+                            <h3 class="text-xl font-semibold text-gray-900 mb-2">Beds & Bedroom</h3>
+                            <p class="text-gray-600 text-sm">Your sanctuary awaits.</p>
+                            <span class="mt-4 inline-block text-indigo-600 hover:text-indigo-800 font-medium transition duration-300">View All &rarr;</span>
+                        </div>
+                    </a>
+                </div>
+                <!-- Category Card 4 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition duration-300">
+                    <a href="furnishwell-product-listing.html" class="block">
+                        <img src="https://placehold.co/400x250/D1FAE5/065F46?text=Storage+%26+Shelving" alt="Storage & Shelving" class="w-full h-48 object-cover">
+                        <div class="p-6 text-center">
+                            <h3 class="text-xl font-semibold text-gray-900 mb-2">Storage & Shelving</h3>
+                            <p class="text-gray-600 text-sm">Organize with elegance.</p>
+                            <span class="mt-4 inline-block text-indigo-600 hover:text-indigo-800 font-medium transition duration-300">View All &rarr;</span>
+                        </div>
                     </a>
                 </div>
             </div>
         </div>
-        <div class="border-t border-gray-700 mt-8 pt-8 text-center text-sm">
+    </section>
+
+    <!-- Featured Products Section -->
+    <section class="bg-gray-100 py-16 px-4 rounded-lg shadow-inner">
+        <div class="container mx-auto">
+            <h2 class="text-4xl font-bold text-center mb-12 text-indigo-800">Featured Products</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Product Card 1 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition duration-300">
+                    <a href="furnishwell-product-details.html" class="block">
+                        <img src="https://placehold.co/500x350/A78BFA/FFFFFF?text=Elegant+Armchair" alt="Elegant Armchair" class="w-full h-64 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold text-gray-900 mb-2">The Serenity Armchair</h3>
+                            <p class="text-gray-600 mb-4">Plush comfort with a modern design.</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-2xl font-bold text-indigo-700">$499.00</span>
+                                <button class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-6 rounded-full transition duration-300">
+                                    Add to Cart
+                                </button>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <!-- Product Card 2 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition duration-300">
+                    <a href="furnishwell-product-details.html" class="block">
+                        <img src="https://placehold.co/500x350/6EE7B7/FFFFFF?text=Minimalist+Coffee+Table" alt="Minimalist Coffee Table" class="w-full h-64 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold text-gray-900 mb-2">Minimalist Coffee Table</h3>
+                            <p class="text-gray-600 mb-4">Sleek lines for a contemporary look.</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-2xl font-bold text-indigo-700">$249.00</span>
+                                <button class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-6 rounded-full transition duration-300">
+                                    Add to Cart
+                                </button>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <!-- Product Card 3 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition duration-300">
+                    <a href="furnishwell-product-details.html" class="block">
+                        <img src="https://placehold.co/500x350/FCD34D/FFFFFF?text=Scandinavian+Dining+Set" alt="Scandinavian Dining Set" class="w-full h-64 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold text-gray-900 mb-2">Nordic Dining Set</h3>
+                            <p class="text-gray-600 mb-4">Bringing warmth to your dining experience.</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-2xl font-bold text-indigo-700">$899.00</span>
+                                <button class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-6 rounded-full transition duration-300">
+                                    Add to Cart
+                                </button>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section class="bg-indigo-700 text-white py-20 px-4 text-center rounded-t-lg shadow-lg">
+        <div class="container mx-auto">
+            <h2 class="text-4xl md:text-5xl font-bold mb-6">Ready to Transform Your Home?</h2>
+            <p class="text-xl md:text-2xl mb-10 opacity-90">
+                Sign up for our newsletter and get 10% off your first order!
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
+                <input type="email" placeholder="Enter your email" class="py-3 px-6 rounded-full w-full sm:w-80 text-gray-800 focus:outline-none focus:ring-2 focus:ring-yellow-400">
+                <button class="bg-yellow-400 hover:bg-yellow-500 text-indigo-900 font-bold py-3 px-8 rounded-full shadow-lg transition duration-300 transform hover:scale-105 w-full sm:w-auto">
+                    Subscribe Now
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="bg-gray-800 text-gray-300 py-10 px-4 rounded-b-lg">
+        <div class="container mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
+            <!-- Footer Column 1: About -->
+            <div>
+                <h3 class="text-xl font-bold text-white mb-4">FurnishWell</h3>
+                <p class="text-sm">
+                    Your trusted partner for high-quality, stylish furniture that turns houses into homes.
+                </p>
+            </div>
+            <!-- Footer Column 2: Quick Links -->
+            <div>
+                <h3 class="text-xl font-bold text-white mb-4">Quick Links</h3>
+                <ul class="space-y-2">
+                    <li><a href="furnishwell-product-listing.html" class="hover:text-white transition duration-300">Shop All</a></li>
+                    <li><a href="furnishwell-product-listing.html" class="hover:text-white transition duration-300">New Arrivals</a></li>
+                    <li><a href="furnishwell-product-listing.html" class="hover:text-white transition duration-300">Sale</a></li>
+                    <li><a href="#" class="hover:text-white transition duration-300">FAQs</a></li>
+                </ul>
+            </div>
+            <!-- Footer Column 3: Customer Service -->
+            <div>
+                <h3 class="text-xl font-bold text-white mb-4">Customer Service</h3>
+                <ul class="space-y-2">
+                    <li><a href="#" class="hover:text-white transition duration-300">Contact Us</a></li>
+                    <li><a href="#" class="hover:text-white transition duration-300">Shipping & Returns</a></li>
+                    <li><a href="#" class="hover:text-white transition duration-300">Privacy Policy</a></li>
+                    <li><a href="#" class="hover:text-white transition duration-300">Terms of Service</a></li>
+                </ul>
+            </div>
+            <!-- Footer Column 4: Contact Info -->
+            <div>
+                <h3 class="text-xl font-bold text-white mb-4">Contact Info</h3>
+                <p class="text-sm">123 Furniture Lane, Design City, DC 12345</p>
+                <p class="text-sm">Email: info@furnishwell.com</p>
+                <p class="text-sm">Phone: (123) 456-7890</p>
+                <div class="flex space-x-4 mt-4">
+                    <!-- Social Media Icons (Placeholder) -->
+                    <a href="#" class="text-gray-400 hover:text-white transition duration-300">FB</a>
+                    <a href="#" class="text-gray-400 hover:text-white transition duration-300">IG</a>
+                    <a href="#" class="text-gray-400 hover:text-white transition duration-300">TW</a>
+                </div>
+            </div>
+        </div>
+        <div class="text-center text-sm text-gray-500 mt-10 pt-6 border-t border-gray-700">
             &copy; 2025 FurnishWell. All rights reserved.
         </div>
     </footer>
+
 </body>
 </html>
-
